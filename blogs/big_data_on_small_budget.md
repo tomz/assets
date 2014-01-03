@@ -26,7 +26,9 @@ Here are the costs of some commonly used EC2 instance types, except hs1.8xlarge 
 </tbody>
 </table>
 
+
 And for a 10 node cluster, the cost can be calculated using the [AWS cost calculator](http://calculator.s3.amazonaws.com/calc5.html#s=EMR)
+
 
 <table border="0.5">
 <thead>
@@ -47,6 +49,7 @@ And for a 10 node cluster, the cost can be calculated using the [AWS cost calcul
 <tr><th>Cons</th><td>Cost expensive, limited choices of OS, Hadoop distribution and applications</td><tr>
 </tbody>
 </table>
+
 
 For 10 node m2.4xlarge cluster the monthly cost is $16435 (also you will need to budget around 1/5 of that to cover network i/o and storage costs).
 
@@ -73,6 +76,7 @@ AWS Elastic Map/Reduce adds management and software cost on top of the instance 
 <tr><th>Cons</th><td>Need to manually install and manage the cluster</td><tr>
 </tbody>
 </table>
+
  
 For a 10 node m2.4xlarge cluster the monthly cost is $11800 (also you will need to budget around 1/5 of that to cover network i/o and storage costs, plus labor cost, and software licensing costs).
 
@@ -112,7 +116,9 @@ Cost of a 10 node off-the-shelf servers
 </tbody>
 </table>
 
+
 So a 10 node cluster similar to m2.4xlarge costs around $15000, and a lower end setup equivalent to a 10 m2.2xlarge node cluster costs around $10000 
+
 
 <table border="0.5">
 <tbody>
