@@ -51,7 +51,7 @@ And for a 10 node cluster, the cost can be calculated using the [AWS cost calcul
 </table>
 
 
-For 10 node m2.4xlarge cluster the monthly cost is $16435 (also you will need to budget around 1/5 of that to cover network i/o and storage costs).
+For **a 10 node m2.4xlarge cluster the monthly cost is $16435** (also you will need to budget around 1/5 of that to cover network i/o and storage costs).
 
 ### DIY using AWS EC2 instances 
 
@@ -78,7 +78,7 @@ AWS Elastic Map/Reduce adds management and software cost on top of the instance 
 </table>
 
  
-For a 10 node m2.4xlarge cluster the monthly cost is $11800 (also you will need to budget around 1/5 of that to cover network i/o and storage costs, plus labor cost, and software licensing costs).
+For **a 10 node m2.4xlarge cluster the monthly cost is $11800** (also you will need to budget around 1/5 of that to cover network i/o and storage costs, plus labor cost, and software licensing costs).
 
 If you don't plan to set up a permenant cluster that's available 24/7, you can use spot instances to reduce cost.  For permenant clusters, using reserved instances can lower your costs, [you can find more details here](http://aws.amazon.com/elasticmapreduce/pricing/).
 
@@ -110,14 +110,14 @@ Cost of a 10 node off-the-shelf servers
 <tr><th>Off-The-Shelf</th><th>vCPU</th><th>ECU</th><th>Memory(GB)</th><th>Storage(GB)</th><th>SSD(GB)</th><th>CPU Speed</th><th>Cost</th></tr>
 </thead>
 <tbody>
-<tr><td>Low End</td><td>4</td><td>12</td><td>16</td><td>2000</td><td>128</td><td>3Ghz</td><td>$800</td></tr>
-<tr><td>Mid End</td><td>8</td><td>32</td><td>32</td><td>4000</td><td>512</td><td>4Ghz</td><td>$1500</td></tr>
-<tr><td>High End</td><td>8</td><td>32</td><td>64</td><td>16000</td><td>1024</td><td>4Ghz</td><td>$3000</td></tr>
+<tr><td>Low End</td><td>4</td><td>12</td><td>16</td><td>2000</td><td>128</td><td>3Ghz</td><td>$1000 x 10</td></tr>
+<tr><td>Mid End</td><td>8</td><td>32</td><td>32</td><td>4000</td><td>512</td><td>4Ghz</td><td>$1500 x 10</td></tr>
+<tr><td>High End</td><td>8</td><td>32</td><td>64</td><td>16000</td><td>1024</td><td>4Ghz</td><td>$3000 x 10</td></tr>
 </tbody>
 </table>
 
 
-So a 10 node cluster similar to m2.4xlarge costs around $15000, and a lower end setup equivalent to a 10 m2.2xlarge node cluster costs around $10000 
+So **a 10 node cluster similar to m2.4xlarge costs around $15000**, and a lower end setup equivalent to **a 10 m2.2xlarge node cluster costs around $10000** 
 
 
 <table border="0.5">
@@ -134,10 +134,17 @@ You can choose a Hadoop distribution from one of the following competing offerin
 
 
 [Cloudera CDH4](http://www.cloudera.com/content/cloudera/en/products-and-services/cdh.html)
+
+**Applications included**: DataFu, Flume, Hadoop, HBase, HCatalog, Hive, Hue, Mahout, Oozie, Parquet, Pig, Sentry, Scoop, Whirr, Zookeeper, Impala
  
 [Hortonworks HDP](http://hortonworks.com/products/hdp/)
 
+**Applications included**: Core Hadoop(HDFS, MapReduce, Tez, YARN), Data Services(Accumulo, Flume, HBase, HCatalog, Hive, Mahout, Pig, Sqoop, Storm), Operational Services(Ambari, Falcon, Knox Gateway, Oozie, ZooKeeper)
+
+
 [MapR](http://www.mapr.com/products/mapr-editions)
+
+**Applications included**: HBase, Pig, Hive, Mahout, Cascading, Sqoop, Flume and more
 
 ## Resource Links
 
