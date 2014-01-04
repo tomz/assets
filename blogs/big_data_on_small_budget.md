@@ -26,7 +26,9 @@ Here are the costs of some commonly used EC2 instance types, except hs1.8xlarge 
 </tbody>
 </table>
 
+
 And for a 10 node cluster, the cost can be calculated using the [AWS cost calculator](http://calculator.s3.amazonaws.com/calc5.html#s=EMR)
+
 
 <table border="0.5">
 <thead>
@@ -48,11 +50,12 @@ And for a 10 node cluster, the cost can be calculated using the [AWS cost calcul
 </tbody>
 </table>
 
+
 For 10 node m2.4xlarge cluster the monthly cost is $16435 (also you will need to budget around 1/5 of that to cover network i/o and storage costs).
 
 ### DIY using AWS EC2 instances 
 
-AWS Elastic Map/Reduce charge management and software cost on top of the instance costs. If you want to avoid those costs, you can build your cluster using individual EC2 instances, and install and configure the cluster software yourself.
+AWS Elastic Map/Reduce adds management and software cost on top of the instance costs. If you want to avoid those costs, you can build your cluster using individual EC2 instances, and install and configure the cluster software yourself.
 
 <table border="0.5">
 <thead>
@@ -73,6 +76,7 @@ AWS Elastic Map/Reduce charge management and software cost on top of the instanc
 <tr><th>Cons</th><td>Need to manually install and manage the cluster</td><tr>
 </tbody>
 </table>
+
  
 For a 10 node m2.4xlarge cluster the monthly cost is $11800 (also you will need to budget around 1/5 of that to cover network i/o and storage costs, plus labor cost, and software licensing costs).
 
@@ -81,7 +85,7 @@ If you don't plan to set up a permenant cluster that's available 24/7, you can u
 
 ### DIY using servers built with off-the-shelf components
 
-If you are up to building everything yourself, this will be the lowest cost option. Here's the the currently pricing for components and total cost for a mid-to-high end single server (more or less equivalent to EC2 m2.4xlarge, with faster CPU, much more disk space including fast SSD, but less memory):
+If you are up to building everything yourself, this will be the lowest cost option. Here's the current pricing for components and total cost for a mid-to-high end single server (more or less equivalent to EC2 m2.4xlarge, with faster CPU, much more disk space including fast SSD, but less memory):
 
 <table border="0.5">
 <thead>
@@ -112,7 +116,9 @@ Cost of a 10 node off-the-shelf servers
 </tbody>
 </table>
 
-So a 10 node cluster similar to m2.4xlarge costs $15000, and a lower end setup equivalent to a 10 m2.2xlarge node cluster costs around $10000 
+
+So a 10 node cluster similar to m2.4xlarge costs around $15000, and a lower end setup equivalent to a 10 m2.2xlarge node cluster costs around $10000 
+
 
 <table border="0.5">
 <tbody>
@@ -126,7 +132,8 @@ So a 10 node cluster similar to m2.4xlarge costs $15000, and a lower end setup e
 
 You can choose a Hadoop distribution from one of the following competing offerings, they are all pretty good and easy to setup on a cluster, so anyone of those should more or less sastify your big data needs:
 
-[Cloudedea CDH4](http://www.cloudera.com/content/cloudera/en/products-and-services/cdh.html)
+
+[Cloudera CDH4](http://www.cloudera.com/content/cloudera/en/products-and-services/cdh.html)
  
 [Hortonworks HDP](http://hortonworks.com/products/hdp/)
 
