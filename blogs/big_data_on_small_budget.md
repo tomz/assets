@@ -32,14 +32,14 @@ And for a 10 node cluster, the cost can be calculated using the [AWS cost calcul
 
 <table border="0.5">
 <thead>
-<tr><th>Cluster Size</th><th>Instance Type</th><th>Monthly Cost</th></tr>
+<tr><th>Cluster Size</th><th>Instance Type</th><th>Capacity(TB)</th><th>Monthly Cost</th></tr>
 </thead>
 <tbody>
-<tr><td>10 node</td><td>m2.4xlarge</td><td>$16435</td></tr>
-<tr><td>10 node</td><td>m2.2xlarge</td><td>$8294</td></tr>
-<tr><td>10 node</td><td>c1.xlarge</td><td>$5636</td></tr>
-<tr><td>10 node</td><td>m1.xlarge</td><td>$4831</td></tr>
-<tr><td>10 node</td><td>hs1.8xlarge</td><td>$41733</td></tr>
+<tr><td>10 node</td><td>m2.4xlarge</td><td>8.5</td><td>$16435</td></tr>
+<tr><td>10 node</td><td>m2.2xlarge</td><td>16.8</td><td>$8294</td></tr>
+<tr><td>10 node</td><td>c1.xlarge</td><td>8.4</td><td>$5636</td></tr>
+<tr><td>10 node</td><td>m1.xlarge</td><td>8.4</td><td>$4831</td></tr>
+<tr><td>10 node</td><td>hs1.8xlarge</td><<td>490</td><td>$41733</td></tr>
 </tbody>
 </table>
 
@@ -59,14 +59,14 @@ AWS Elastic Map/Reduce adds management and software cost on top of the instance 
 
 <table border="0.5">
 <thead>
-<tr><th>Cluster Size</th><th>Instance Type</th><th>Monthly Cost</th></tr>
+<tr><th>Cluster Size</th><th>Instance Type</th><th>Capacity(TB)</th><th>Monthly Cost</th></tr>
 </thead>
 <tbody>
-<tr><td>10 node</td><td>m2.4xlarge</td><td>$11800</td></tr>
-<tr><td>10 node</td><td>m2.2xlarge</td><td>$5900</td></tr>
-<tr><td>10 node</td><td>c1.xlarge</td><td>$4180</td></tr>
-<tr><td>10 node</td><td>m1.xlarge</td><td>$3450</td></tr>
-<tr><td>10 node</td><td>hs1.8xlarge</td><td>$33120</td></tr>
+<tr><td>10 node</td><td>m2.4xlarge</td><td>8.5</td><td>$11800</td></tr>
+<tr><td>10 node</td><td>m2.2xlarge</td><td>16.8</td><td>$5900</td></tr>
+<tr><td>10 node</td><td>c1.xlarge</td><td>8.5</td><td>$4180</td></tr>
+<tr><td>10 node</td><td>m1.xlarge</td><td>8.4</td><td>$3450</td></tr>
+<tr><td>10 node</td><td>hs1.8xlarge</td><td>490</td><td>$33120</td></tr>
 </tbody>
 </table>
 
@@ -104,21 +104,33 @@ If you are up to building everything yourself, this will be the lowest cost opti
 </tbody>
 </table>
 
-Cost of a 10 node off-the-shelf servers
+Sample configurations from low to high end:
 <table border="0.5">
 <thead>
 <tr><th>Off-The-Shelf</th><th>vCPU</th><th>ECU</th><th>Memory(GB)</th><th>Storage(GB)</th><th>SSD(GB)</th><th>CPU Speed</th><th>Cost</th></tr>
 </thead>
 <tbody>
-<tr><td>Low End</td><td>4</td><td>12</td><td>16</td><td>2000</td><td>128</td><td>3Ghz</td><td>$1000 x 10</td></tr>
-<tr><td>Mid End</td><td>8</td><td>32</td><td>32</td><td>4000</td><td>512</td><td>4Ghz</td><td>$1500 x 10</td></tr>
-<tr><td>High End</td><td>8</td><td>32</td><td>64</td><td>16000</td><td>1024</td><td>4Ghz</td><td>$3000 x 10</td></tr>
+<tr><td>Low End</td><td>4</td><td>12</td><td>16</td><td>2000</td><td>128</td><td>3Ghz</td><td>$1000 </td></tr>
+<tr><td>Mid End</td><td>8</td><td>32</td><td>32</td><td>4000</td><td>512</td><td>4Ghz</td><td>$1500</td></tr>
+<tr><td>High End</td><td>8</td><td>32</td><td>64</td><td>16000</td><td>1024</td><td>4Ghz</td><td>$3000</td></tr>
 </tbody>
 </table>
 
+Cost of a 10 node off-the-shelf servers
+<table border="0.5">
+<thead>
+<tr><th>Cluster Size</th><th>Instance Type</th><th>Capacity(TB)</th><th>Monthly Cost</th></tr>
+</thead>
+<tbody>
+<tr><td>10 node</td><td>Low End</td><td>22</td><td>$10000</td></tr>
+<tr><td>10 node</td><td>Mid End</td><td>45</td><td>$15000</td></tr>
+<tr><td>10 node</td><td>High End</td><td>160</td><td>$30000</td></tr>
+</tbody>
+</table>
 
-So **a 10 node cluster similar to m2.4xlarge costs around $15000**, and a lower end setup equivalent to **a 10 m2.2xlarge node cluster costs around $10000** 
+So **a 10 node cluster similar to m2.4xlarge costs around $15000**(with a much larger 45TB capacity), and a lower end setup equivalent to **a 10 m2.2xlarge node cluster costs around $10000**(with a much larger 22TB capacity)
 
+To process a petabyte worth of data, we'd need a 63 node cluster with the High End servers, and it will cost close to $200k.  
 
 <table border="0.5">
 <tbody>
