@@ -39,7 +39,7 @@ And for a 10 node cluster, the cost can be calculated using the [AWS cost calcul
 <tr><td>10 node</td><td>m2.2xlarge</td><td>16.8</td><td>$8294</td></tr>
 <tr><td>10 node</td><td>c1.xlarge</td><td>8.4</td><td>$5636</td></tr>
 <tr><td>10 node</td><td>m1.xlarge</td><td>8.4</td><td>$4831</td></tr>
-<tr><td>10 node</td><td>hs1.8xlarge</td><<td>490</td><td>$41733</td></tr>
+<tr><td>10 node</td><td>hs1.8xlarge</td><td>490</td><td>$41733</td></tr>
 </tbody>
 </table>
 
@@ -50,8 +50,9 @@ And for a 10 node cluster, the cost can be calculated using the [AWS cost calcul
 </tbody>
 </table>
 
-
 For **a 10 node m2.4xlarge cluster the monthly cost is $16435** (also you will need to budget around 1/5 of that to cover network i/o and storage costs).
+
+To process a petabyte worth of data, you'd need a 21 node hs1.8xlarge cluster, and it will cost close to $88k/month. 
 
 ### DIY using AWS EC2 instances 
 
@@ -81,6 +82,8 @@ AWS Elastic Map/Reduce adds management and software cost on top of the instance 
 For **a 10 node m2.4xlarge cluster the monthly cost is $11800** (also you will need to budget around 1/5 of that to cover network i/o and storage costs, plus labor cost, and software licensing costs).
 
 If you don't plan to set up a permenant cluster that's available 24/7, you can use spot instances to reduce cost.  For permenant clusters, using reserved instances can lower your costs, [you can find more details here](http://aws.amazon.com/elasticmapreduce/pricing/).
+
+To process a petabyte worth of data, you'd need a 21 node hs1.8xlarge cluster, and it will cost close to $70k/month.  
 
 
 ### DIY using servers built with off-the-shelf components
@@ -119,7 +122,7 @@ Sample configurations from low to high end:
 Cost of a 10 node off-the-shelf servers
 <table border="0.5">
 <thead>
-<tr><th>Cluster Size</th><th>Instance Type</th><th>Capacity(TB)</th><th>Monthly Cost</th></tr>
+<tr><th>Cluster Size</th><th>Instance Type</th><th>Capacity(TB)</th><th>Cost</th></tr>
 </thead>
 <tbody>
 <tr><td>10 node</td><td>Low End</td><td>22</td><td>$10000</td></tr>
@@ -128,16 +131,16 @@ Cost of a 10 node off-the-shelf servers
 </tbody>
 </table>
 
-So **a 10 node cluster similar to m2.4xlarge costs around $15000**(with a much larger 45TB capacity), and a lower end setup equivalent to **a 10 m2.2xlarge node cluster costs around $10000**(with a much larger 22TB capacity)
-
-To process a petabyte worth of data, we'd need a 63 node cluster with the High End servers, and it will cost close to $200k.  
-
 <table border="0.5">
 <tbody>
 <tr><th>Pros</th><td>Cheapiest option, install any OS, Hadoop distro, and applications, able to take advantage of physical hardware</td><tr>
 <tr><th>Cons</th><td>Need to manually install and manage the cluster, and physical hardware</td><tr>
 </tbody>
 </table>
+
+So **a 10 node cluster similar to m2.4xlarge costs around $15000**(with a much larger 45TB capacity), and a lower end setup equivalent to **a 10 m2.2xlarge node cluster costs around $10000**(with a much larger 22TB capacity)
+
+To process a petabyte worth of data, we'd need a 63 node cluster with the High End servers, and it will cost close to $200k.  
 
 
 ## Choosing a Hadoop Distribution
