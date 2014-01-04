@@ -2,7 +2,7 @@
 
 Excerpt: Processing big data can be done on a small budget, we will talk about building a Hadoop cluster with 45TB capacity with $15k, and compare it with the costs of Elastic Map/Reduce clusters on AWS.
 
-Processing big data requires a lot of CPU power and storage space, you will need a cluster of powerful servers to process data in a distributed fashion. Setting up a cluster could be very expensive. Here we look at several relatively low cost options. We are not talking about petabytes big data at the major league scale like Fackbook and Twitter, but big enough that can not be handled by traditional RDBMS - at 10s to 100s terabytes. We will be focusing on building a 10 node cluster for using Hadoop, but it can be used for other distributed computing platforms like Cassandra or Storm.
+Processing big data requires a lot of CPU power and storage space, you will need a cluster of powerful servers to process data in a distributed fashion. Setting up a cluster could be very expensive. Here we look at several relatively low cost options. We are not talking about petabytes big data at the major league scale like Fackbook and Twitter, but big enough that can not be handled by traditional RDBMS - at 10s to 100s terabytes. We will be focusing on building a 10 node cluster for using Hadoop, but it can be used for other distributed computing platforms like Cassandra, Storm, or Spark.
 
 1. AWS Elastic Map/Reduce
 2. DIY using AWS EC2 instances
@@ -124,13 +124,24 @@ So a 10 node cluster similar to m2.4xlarge costs $15000, and a lower end setup e
 
 ## Choosing a Hadoop Distribution
 
-You can choose a Hadoop distribution from one of the following competing offerings, they are all pretty good, so anyone of the should more or less sastify your big data needs:
+You can choose a Hadoop distribution from one of the following competing offerings, they are all pretty good and easy to setup on a cluster, so anyone of those should more or less sastify your big data needs:
 
 [Cloudedea CDH4](http://www.cloudera.com/content/cloudera/en/products-and-services/cdh.html)
  
 [Hortonworks HDP](http://hortonworks.com/products/hdp/)
 
 [MapR](http://www.mapr.com/products/mapr-editions)
+
+## Resource Links
+
+Other distributed computing environments worthwhile to check out:
+
+[Cassandra](http://cassandra.apache.org/) [Datastax](http://www.datastax.com/)
+
+[Storm](http://storm-project.net/)
+
+[Spark](http://spark.incubator.apache.org/)
+
 
 
 
