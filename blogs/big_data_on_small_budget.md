@@ -119,7 +119,7 @@ Sample configurations from low to high end:
 </tbody>
 </table>
 
-Cost of a 10 node off-the-shelf servers
+Cost of a 10 node off-the-shelf servers:
 <table border="0.5">
 <thead>
 <tr><th>Cluster Size</th><th>Instance Type</th><th>Capacity(TB)</th><th>Cost</th></tr>
